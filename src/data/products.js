@@ -1,0 +1,10 @@
+export const products = [
+  { id: 1, name: 'AeroBlend Mini Blender', category: 'Kitchen', price: 5490, oldPrice: 6990, tag: 'BESTSELLER', rating: 4.9, image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=900&q=85', color: '#e7e1d7' },
+  { id: 2, name: 'CloudTouch Smart Lamp', category: 'Home', price: 4290, oldPrice: 5200, tag: 'NEW', rating: 4.8, image: 'https://images.unsplash.com/photo-150 7473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85'.replace('150 747', '150747'), color: '#e5e2d9' },
+  { id: 3, name: 'CrispWave Air Fryer', category: 'Kitchen', price: 12990, oldPrice: 15990, tag: 'SAVE 19%', rating: 4.9, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmCipRdudW1KJ44MeuIEwZgCxNzELS0nQdGVPnx5YgrA&s', color: '#e7ddd1' },
+  { id: 4, name: 'PurePour Electric Kettle', category: 'Kitchen', price: 3890, oldPrice: null, tag: '', rating: 4.7, image: 'https://images.unsplash.com/photo-1608354580875-30bd4168b351?auto=format&fit=crop&w=900&q=85', color: '#e7e2d8' },
+  { id: 5, name: 'Glow Ambient Decoration Light', category: 'Home', price: 3190, oldPrice: 3990, tag: 'POPULAR', rating: 4.8, image: 'https://images.pexels.com/photos/1400140/pexels-photo-1400140.jpeg', color: '#e6e0d6' },
+  { id: 6, name: 'SnapChop Food Chopper', category: 'Kitchen', price: 2490, oldPrice: null, tag: '', rating: 4.6, image: 'https://homazing.pk/cdn/shop/files/homazing-1312.jpg?v=1690274878', color: '#e9e3da' },
+  { id: 7, name: 'Orbit Mini Desk Fan', category: 'Home', price: 2790, oldPrice: 3290, tag: 'TRENDING', rating: 4.7, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdSF8wp9HUPBCKFqB4fN1ptq2KXJ9d6KSsiojYmiOtmtvzTiad1GLTpmNz&s=10', color: '#e6e2da' },
+  { id: 8, name: 'BrewBuddy Milk Frother', category: 'Kitchen', price: 1890, oldPrice: null, tag: '', rating: 4.6, image: 'https://ug.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/2624952/1.jpg?3920', color: '#e8e2d8' }
+]

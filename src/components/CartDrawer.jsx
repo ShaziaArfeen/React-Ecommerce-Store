@@ -1,0 +1,10 @@
+import { X, Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react'
+export default function CartDrawer({ open, onClose, cart, updateQty, removeItem }) {
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0)
+  if (!open) return null
+  return <div className="drawer-backdrop" onClick={onClose}><aside className="cart-drawer" onClick={e => e.stopPropagation()}>
+    <div className="drawer-head"><div><span className="eyebrow">YOUR LITTLE FINDS</span><h2>Your bag <span>({cart.reduce((s,i)=>s+i.qty,0)})</span></h2></div><button className="icon-button" onClick={onClose}><X/></button></div>
+    {cart.length === 0 ? <div className="empty-cart"><span className="empty-icon"><ShoppingBag size={30}/></span><h3>Your bag is taking a nap.</h3><p>Add a clever little gadget to wake it up.</p><button className="button button-dark" onClick={onClose}>Explore gadgets</button></div> :
+    <><div className="cart-items">{cart.map(item => <div className="cart-item" key={item.id}><img src={item.image} alt={item.name}/><div className="cart-item-info"><h3>{item.name}</h3><strong>Rs. {(item.price*item.qty).toLocaleString('en-PK')}</strong><div className="qty-control"><button onClick={() => updateQty(item.id, -1)}><Minus size={13}/></button><span>{item.qty}</span><button onClick={() => updateQty(item.id, 1)}><Plus size={13}/></button><button className="remove-item" onClick={() => removeItem(item.id)}><Trash2 size={14}/></button></div></div></div>)}</div><div className="cart-summary"><div className="summary-line"><span>Subtotal</span><strong>Rs. {total.toLocaleString('en-PK')}</strong></div><p>Shipping and payment can be connected when you launch your store.</p><button className="button button-dark checkout-button" onClick={() => alert('Demo checkout: connect a payment gateway to accept real orders.')}>Continue to checkout <span>↗</span></button></div></>}
+  </aside></div>
+}
